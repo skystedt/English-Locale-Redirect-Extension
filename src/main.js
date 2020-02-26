@@ -1,4 +1,5 @@
-const microsoftLocalizedUrl = (locale) => `(https?://(?:[^\\.]+\\.)?microsoft.com)/${locale}/(.*)`;
+const microsoftDomains = ["microsoft\\.com", "office\\.com"];
+const microsoftLocalizedUrl = (locale) => `(https?://(?:[^\\.]+\\.)?(?:${microsoftDomains.join("|")}))/${locale}/(.*)`;
 
 // https://developer.chrome.com/extensions/declarativeWebRequest#type-RedirectByRegEx
 chrome.declarativeWebRequest.onRequest.addRules([{
