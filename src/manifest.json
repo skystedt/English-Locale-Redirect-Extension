@@ -1,20 +1,28 @@
 {
-  "manifest_version": 2,
-  "name": "Microsoft English Locale Redirect",
-  "version": "1.1.0",
-  "description": "Redirects all localized URLs on microsoft.com and office.com to english (en-us).",
+  "manifest_version": 3,
+  "name": "English Locale Redirect",
+  "version": "2.0.0",
+  "description": "Redirects localized URLs on specific sites to English (en-us).",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
   "permissions": [
-    "declarativeWebRequest",
-    "*://*/*"
+    "declarativeNetRequest"
   ],
-  "background": {
-    "scripts": ["main.js"],
-    "persistent": true
-  }
+  "host_permissions": [
+    "*://*.microsoft.com/*",
+    "*://*.office.com/*"
+  ]
 }

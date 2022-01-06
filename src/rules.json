@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "regexFilter": "^https?://[^/]+/en-us/(.*)",
+      "isUrlFilterCaseSensitive": false,
+      "requestMethods": [ "get" ],
+      "resourceTypes": [ "main_frame" ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "\\1/en-us/\\2"
+      }
+    },
+    "condition": {
+      "regexFilter": "^(https?://[^/]+)/[^/-]+(?:-[^/-]+){1,2}/(.*)",
+      "isUrlFilterCaseSensitive": false,
+      "requestMethods": [ "get" ],
+      "resourceTypes": [ "main_frame" ]
+    }
+  }
+]

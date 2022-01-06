@@ -1,6 +1,11 @@
-# MicrosoftLocaleRedirect
-Chrome extension to redirect all localized URLs on microsoft.com and office.com to english (en-us).
+# English-Locale-Redirect-Extension
+Chrome extension to redirect localized URLs on microsoft.com and office.com to English (en-us).
 
-Uses [chrome.declarativeWebRequest beta API](https://developer.chrome.com/extensions/declarativeWebRequest). It is only available to Chrome users on the [beta channel](https://www.google.com/landing/chrome/beta/) and [dev channel](http://www.chromium.org/getting-involved/dev-channel).
+E.g. when searching in search engines and getting hits, it can link you to a localized version of the site but you want to use the English version.
+This extension will automatically redirect you to the English version.
+`https://docs.microsoft.com/sv-se/dotnet/` → `https://docs.microsoft.com/en-us/dotnet/`
 
 [Chrome Web Store](https://chrome.google.com/webstore/detail/emigmchappambenffnmfffpihlikcgko)
+
+*Microsoft and Microsoft Office are trademarks of the Microsoft group of companies.
+This extensions and it's creators are not affiliated with the Microsoft group of companies.*
